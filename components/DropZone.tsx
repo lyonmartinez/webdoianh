@@ -69,7 +69,7 @@ export const DropZone: React.FC<DropZoneProps> = ({ onFileSelect }) => {
         </div>
         <div>
           <p className="text-lg font-semibold text-slate-200">
-            Drop your images here, or <span className="text-blue-400">browse</span>
+            Thả hình vô ảnh vô hoặc <span className="text-blue-400">chọn từ thư viện</span>
           </p>
           <p className="text-sm text-slate-400 mt-2">
             Supports multiple PNG, JPG, WebP files
