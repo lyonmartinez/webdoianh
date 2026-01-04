@@ -271,7 +271,7 @@ function App() {
                 {appState !== AppState.IDLE && (
                     <div className="flex gap-2">
                          <Button variant="ghost" onClick={reset} className="text-sm">
-                            Clear All
+                            Xoá tất cả
                         </Button>
                     </div>
                 )}
@@ -320,14 +320,14 @@ function App() {
                         </div>
                         
                         <div className="bg-slate-800/40 rounded-xl p-6 border border-slate-700/50 backdrop-blur-sm">
-                            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Batch Actions</h3>
+                            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">Hành động hàng loạt</h3>
                             <div className="space-y-3">
                                 <Button 
                                     variant="primary" 
                                     className="w-full text-sm" 
                                     onClick={handleDownloadAll}
                                 >
-                                    Download All (ZIP)
+                                    Tải xuống tất cả (ZIP)
                                 </Button>
                                 <Button 
                                     variant="secondary" 
@@ -341,14 +341,14 @@ function App() {
                         </div>
 
                          <div className="bg-slate-800/20 rounded-xl p-4 border border-slate-700/30 text-xs text-slate-400">
-                            <p>Tip: In "Dimensions" mode, priority is given to Width. Height is auto-calculated per image to maintain aspect ratio.</p>
+                            <p>Mẹo: Trong chế độ "Kích thước", ưu tiên được dành cho Chiều rộng. Chiều cao được tính toán tự động trên mỗi hình ảnh để duy trì tỷ lệ khung hình.</p>
                          </div>
                     </div>
 
                     {/* Image Grid */}
                     <div className="lg:col-span-9 space-y-6">
                         <div className="flex justify-between items-center bg-slate-800/40 p-4 rounded-xl border border-slate-700/50">
-                            <h2 className="text-lg font-semibold text-white">Processed Images</h2>
+                            <h2 className="text-lg font-semibold text-white">Hình ảnh đã xử lý</h2>
                             <div className="relative">
                                 {/* Hidden input for adding more */}
                                 <input 
@@ -362,7 +362,7 @@ function App() {
                                     }}
                                 />
                                 <Button variant="ghost" className="text-sm">
-                                    + Add Images
+                                    + Thêm ảnh
                                 </Button>
                             </div>
                         </div>
