@@ -288,7 +288,7 @@ function App() {
                         </h1>
                         <p className="text-lg text-slate-400">
                             Thay đổi hàng loạt ảnh và kích ảnh. 
-                            Tự động tạo tệp SEO và văn bản thay thếnnjj.
+                            Tự động tạo tệp SEO và văn bản thay thế.
                         </p>
                     </div>
                     <DropZone onFileSelect={handleFilesSelect} />
