@@ -89,19 +89,19 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
     <div className="space-y-6">
       <div className="flex items-center justify-between pb-4 border-b border-slate-700/50">
         <div>
-            <h3 className="text-lg font-semibold text-white">Resize Settings</h3>
+            <h3 className="text-lg font-semibold text-white">Resize Chinhr sửa</h3>
             {imageCount > 1 && <span className="text-xs text-blue-400">{imageCount} images selected</span>}
         </div>
         <button 
           onClick={onReset}
           className="text-xs text-blue-400 hover:text-blue-300 font-medium"
         >
-          Reset
+          Trở lại
         </button>
       </div>
 
       <div className="space-y-2">
-         <label className="text-xs font-medium text-slate-400 uppercase tracking-wider">Output Format</label>
+         <label className="text-xs font-medium text-slate-400 uppercase tracking-wider">Loại ảnh xuất ra</label>
          <div className="relative">
             <select
                 value={settings.format}
@@ -120,7 +120,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
          </div>
          {settings.format === 'dds' && (
              <p className="text-[10px] text-yellow-500/80 mt-1">
-                 DDS output uses uncompressed BGRA32 format. Compatible with most game engines.
+                 Đầu ra DDS sử dụng định dạng BGRA32 không nén. Tương thích với hầu hết các công cụ trò chơi.
              </p>
          )}
       </div>
@@ -133,13 +133,13 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
             onClick={() => setMode('percentage')}
             className={`flex-1 py-1.5 text-sm font-medium rounded-md transition-all ${settings.mode === 'percentage' ? 'bg-blue-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'}`}
         >
-            Percentage
+            Phần trăm
         </button>
         <button
             onClick={() => setMode('dimensions')}
             className={`flex-1 py-1.5 text-sm font-medium rounded-md transition-all ${settings.mode === 'dimensions' ? 'bg-blue-600 text-white shadow' : 'text-slate-400 hover:text-slate-200'}`}
         >
-            Dimensions
+            Kích thước
         </button>
       </div>
 
@@ -181,7 +181,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
                 `} />
                 </button>
                 <div className="flex flex-col">
-                    <span className="text-sm text-slate-300">Maintain Aspect Ratio</span>
+                    <span className="text-sm text-slate-300">Duy trì tỷ lệ khung hình</span>
                     {imageCount > 1 && settings.maintainAspectRatio && (
                         <span className="text-xs text-slate-500">Resizes based on {settings.priorityDimension}</span>
                     )}
@@ -194,7 +194,7 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
       {settings.mode === 'percentage' && (
         <div className="space-y-4 pt-2 animate-fade-in">
             <div className="flex justify-between items-center">
-            <label className="text-sm font-medium text-slate-300">Scale Percentage</label>
+            <label className="text-sm font-medium text-slate-300">Tỷ lện phần trăm</label>
             <span className="text-sm font-bold text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded">{settings.scalePercentage}%</span>
             </div>
             <input
@@ -210,13 +210,13 @@ export const ControlPanel: React.FC<ControlPanelProps> = ({
 
       {/* Info Stats */}
       <div className="bg-slate-900/50 rounded-lg p-4 space-y-2 text-sm border border-slate-800">
-        <p className="text-slate-400 text-xs uppercase font-bold tracking-wider mb-2">Reference (First Image)</p>
+        <p className="text-slate-400 text-xs uppercase font-bold tracking-wider mb-2">Tài liệu tham khảo (Hình ảnh đầu tiên)</p>
         <div className="flex justify-between">
-          <span className="text-slate-500">Original</span>
+          <span className="text-slate-500">Nguyên </span>
           <span className="text-slate-300">{referenceDimensions.width} x {referenceDimensions.height}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-slate-500">Target</span>
+          <span className="text-slate-500">Mục tiêu</span>
           <span className="text-blue-300">
             {settings.mode === 'percentage' 
                 ? `${settings.scalePercentage}%`
