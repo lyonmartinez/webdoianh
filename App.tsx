@@ -283,12 +283,12 @@ function App() {
                 <div className="min-h-[60vh] flex flex-col items-center justify-center animate-fade-in">
                     <div className="text-center mb-10 max-w-2xl">
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                            Resize PNGs instantly. <br />
-                            <span className="text-blue-500">Enhanced by AI.</span>
+                            Thay đổi kích thước ảnh và định dạng ảnh. <br />
+                            <span className="text-blue-500">Phát triển bới Luis.</span>
                         </h1>
                         <p className="text-lg text-slate-400">
-                            Batch resize images client-side. 
-                            Generate SEO filenames and alt text automatically.
+                            Thay đổi hàng loạt ảnh và kích ảnh. 
+                            Tự động tạo tệp SEO và văn bản thay thếnnjj.
                         </p>
                     </div>
                     <DropZone onFileSelect={handleFilesSelect} />
